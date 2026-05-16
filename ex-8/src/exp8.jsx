@@ -2,87 +2,158 @@ function Exp8() {
   return (
     <>
       {/* Navbar */}
-      <nav className="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
         <div className="container">
           <a className="navbar-brand" href="#">
             Tech Store
           </a>
+
+          <ul className="navbar-nav ms-auto d-flex flex-row gap-3">
+            <li className="nav-item">
+              <a className="nav-link active" href="#">
+                Home
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                About Us
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Services
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Contact Us
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
 
-      {/* Cards */}
-      <div className="container mt-4">
+      {/* Product Cards */}
+      <div className="container mt-5">
         <div className="row">
 
-          <div className="col-md-4 mb-3">
-            <div className="card p-3">
+          {/* Laptop Card */}
+          <div className="col-md-4 mb-4">
+            <div className="card shadow">
 
-              <h3>Laptop</h3>
+              <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                className="card-img-top"
+                alt="Laptop"
+                style={{ height: "220px", objectFit: "cover" }}
+              />
 
-              <p>
-                Simple laptop description
-              </p>
+              <div className="card-body">
 
-              <span className="badge bg-success">
-                New
-              </span>
+                <span className="badge bg-success mb-2">
+                  New
+                </span>
 
-              <button
-                className="btn btn-primary mt-3"
-                data-bs-toggle="modal"
-                data-bs-target="#myModal"
-              >
-                View Details
-              </button>
+                <h4>Pro Laptop</h4>
 
+                <p className="text-muted">
+                  High performance laptop with 16GB RAM and 512GB SSD storage.
+                </p>
+
+                <h5 className="text-primary">
+                  ₹75,999
+                </h5>
+
+                <button
+                  className="btn btn-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  View Details
+                </button>
+
+              </div>
             </div>
           </div>
 
-          <div className="col-md-4 mb-3">
-            <div className="card p-3">
+          {/* Mobile Card */}
+          <div className="col-md-4 mb-4">
+            <div className="card shadow">
 
-              <h3>Mobile</h3>
+              <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                className="card-img-top"
+                alt="Mobile"
+                style={{ height: "220px", objectFit: "cover" }}
+              />
 
-              <p>
-                Simple mobile description
-              </p>
+              <div className="card-body">
 
-              <span className="badge bg-danger">
-                Sale
-              </span>
+                <span className="badge bg-danger mb-2">
+                  Sale
+                </span>
 
-              <button
-                className="btn btn-primary mt-3"
-                data-bs-toggle="modal"
-                data-bs-target="#myModal"
-              >
-                View Details
-              </button>
+                <h4>Smartphone X</h4>
 
+                <p className="text-muted">
+                  Latest smartphone with 108MP camera and 5000mAh battery.
+                </p>
+
+                <h5 className="text-primary">
+                  ₹29,999
+                </h5>
+
+                <button
+                  className="btn btn-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  View Details
+                </button>
+
+              </div>
             </div>
           </div>
 
-          <div className="col-md-4 mb-3">
-            <div className="card p-3">
+          {/* Tablet Card */}
+          <div className="col-md-4 mb-4">
+            <div className="card shadow">
 
-              <h3>Headphones</h3>
+              <img
+                src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
+                className="card-img-top"
+                alt="Tablet"
+                style={{ height: "220px", objectFit: "cover" }}
+              />
 
-              <p>
-                Simple headphones description
-              </p>
+              <div className="card-body">
 
-              <span className="badge bg-warning text-dark">
-                New
-              </span>
+                <span className="badge bg-warning text-dark mb-2">
+                  Popular
+                </span>
 
-              <button
-                className="btn btn-primary mt-3"
-                data-bs-toggle="modal"
-                data-bs-target="#myModal"
-              >
-                View Details
-              </button>
+                <h4>Smart Tablet</h4>
 
+                <p className="text-muted">
+                  Powerful tablet with 10" display and all-day battery life.
+                </p>
+
+                <h5 className="text-primary">
+                  ₹45,999
+                </h5>
+
+                <button
+                  className="btn btn-primary w-100 mt-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  View Details
+                </button>
+
+              </div>
             </div>
           </div>
 
@@ -90,7 +161,11 @@ function Exp8() {
       </div>
 
       {/* Modal */}
-      <div className="modal fade" id="myModal">
+      <div
+        className="modal fade"
+        id="myModal"
+        tabIndex="-1"
+      >
         <div className="modal-dialog">
           <div className="modal-content">
 
@@ -107,7 +182,7 @@ function Exp8() {
             </div>
 
             <div className="modal-body">
-              Product information shown here.
+              This product is available with amazing features and warranty.
             </div>
 
             <div className="modal-footer">
@@ -124,8 +199,8 @@ function Exp8() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center p-3 mt-4">
-        Copyright © 2026
+      <footer className="bg-dark text-white text-center p-4 mt-5">
+        © 2025 TechStore. All Rights Reserved.
       </footer>
     </>
   )
