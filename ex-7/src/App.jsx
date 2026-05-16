@@ -1,4 +1,4 @@
-import ResponsivePage from './Lab/Exp7/ResponsivePage'
+import ResponsivePage from './ResponsivePage'
 
 function App() {
   return (
